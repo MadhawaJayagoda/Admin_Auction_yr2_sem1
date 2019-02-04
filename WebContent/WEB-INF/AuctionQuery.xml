@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- by Madhawa Jayagoda -  ( IT17184304 )  SLIIT 2018 OOP project
+	SQL queries -->
+<Querys>
+
+	<!-- Create table auction Query -->
+	<query id="create_auction_table">
+        <![CDATA[
+            CREATE TABLE auction(
+				auctionID int not null primary key,
+				sellerID int not null,
+				product_name varchar(45),
+				addedDate TIMESTAMP default CURRENT_TIMESTAMP,
+				category varchar(45),
+				no_of_bidders  int
+			)
+        ]]>
+   	</query>
+        
+   	<!-- DROP TABLE auction Query -->
+	<query id="drop_table">
+         <![CDATA[        
+            DROP TABLE IF EXISTS auction 
+        ]]>
+	</query>
+	
+	<!-- Insert into auction -->
+	<query id="insert_auction">
+        <![CDATA[
+          	insert into auction (auctionID, sellerID, product_name, addedDate) 
+          	values (?, ?, ?, ?, ?, ?, ?, ?)
+        ]]>
+	</query>
+	
+	<!-- Select a particular auction by id Query -->
+	<query id="auction_by_id">
+         <![CDATA[        
+            select * from auction where auction.auctionID = ?
+        ]]>
+	</query>
+	
+	<!-- Select all auctions -->
+	<query id="all_auctions">
+         <![CDATA[        
+            select * from auction
+        ]]>
+	</query>
+	
+	<!-- Delete a particular auction by id Query -->
+	<query id="remove_auction">
+         <![CDATA[        
+            delete from auction where auction.auctionID = ?
+        ]]>
+	</query>
+	
+	<!-- Update a particular auction by id Query -->
+	<query id="update_auction">
+         <![CDATA[        
+            update auction as a
+            set a.sellerID = ?, a.product_name = ?, a.addedDate = ?, a.category = ?, a.no_of_bidders = ?
+            where  a.auctionID = ?
+        ]]>
+	</query>
+	
+	<!-- Get auction IDs Query -->
+	<query id="auction_ids">
+         <![CDATA[        
+            select a.auctionID from auction as a
+        ]]>
+	</query>
+	
+	<!-- Get seller IDs Query -->
+	<query id="seller_ids">
+         <![CDATA[        
+            select a.sellerID from auction as a
+        ]]>
+	</query>
+	
+</Querys>

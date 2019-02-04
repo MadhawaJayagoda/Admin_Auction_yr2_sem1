@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+	<!-- by Madhawa Jayagoda -  ( IT17184304 )  SLIIT 2018 OOP project -->
+	
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>OOP Auction Web App</display-name>
+ 
+  <servlet>
+    <servlet-name>AddAuctionServlet</servlet-name>
+    <servlet-class>oop.servlet.AddAuctionServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>UpdateAuctionServlet</servlet-name>
+    <servlet-class>oop.servlet.UpdateAuctionServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>DeleteAuctionServlet</servlet-name>
+    <servlet-class>oop.servlet.DeleteAuctionServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>GetAuctionServlet</servlet-name>
+    <servlet-class>oop.servlet.GetAuctionServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ListAuctionServlet</servlet-name>
+    <servlet-class>oop.servlet.ListAuctionServlet</servlet-class>
+  </servlet>
+ 
+  <servlet-mapping>
+    <servlet-name>AddAuctionServlet</servlet-name>
+    <url-pattern>/AddAuctionServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UpdateAuctionServlet</servlet-name>
+    <url-pattern>/UpdateAuctionServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DeleteAuctionServlet</servlet-name>
+    <url-pattern>/DeleteAuctionServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GetAuctionServlet</servlet-name>
+    <url-pattern>/GetAuctionServlet</url-pattern>
+  </servlet-mapping>
+   <servlet-mapping>
+    <servlet-name>ListAuctionServlet</servlet-name>
+    <url-pattern>/ListAuctionServlet</url-pattern>
+  </servlet-mapping>
+ 
+ 
+  <welcome-file-list>
+    <welcome-file>homeView.html</welcome-file>
+    <welcome-file>homeView.htm</welcome-file>
+    <welcome-file>homeView.jsp</welcome-file>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>
